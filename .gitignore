@@ -1,0 +1,14 @@
+node_modules/
+dist/
+server/data/
+server/uploads/
+backend/data/
+backend/uploads/
+*.db
+reading_reports/*.md
+literature_reviews/*.md
+backend/.venv/
+__pycache__/
+*.pyc
+*.log
+.DS_Store

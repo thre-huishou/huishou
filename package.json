@@ -1,0 +1,19 @@
+{
+  "name": "literature-manager",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,client -c yellow,green \"npm run dev:api\" \"npm run dev --prefix client\"",
+    "start": "npm run dev",
+    "dev:api": "cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 3001",
+    "start:api": "npm run dev:api",
+    "dev:client": "npm run dev --prefix client",
+    "start:client": "npm run dev:client",
+    "install:all": "npm install && npm install --prefix client && cd backend && python -m pip install -r requirements.txt",
+    "build": "npm run build --prefix client",
+    "preview": "npm run preview --prefix client",
+    "typecheck": "npm run typecheck --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
